@@ -25,7 +25,7 @@ int BF(int a, int b)
 }
 
 // Using Memo: DP: Bottom Up
-// DT[a][b] = from (0, 0) to (a, b)
+// DT[a][b] = from (0, 0) to (a, b), get values from (a, b) to (0, 0)
 // DT[a][b] = DT[a+1][b] + DT[a][b+1];
 // Base cases:
 // 1) DT[a][b] = 1 (a = N, b = M)
@@ -43,7 +43,7 @@ int DP1(int a, int b)
 }
 
 // Using Memo: DP: Top Down
-// DT[a][b] = from (a, b) to (0, 0)
+// DT[a][b] = from (a, b) to (0, 0), get values from (0, 0) to (a, b)
 // DT[a][b] = DT[a-1][b] + DT[a][b-1];
 // Base cases:
 // 1) DT[a][b] = 1 (a = 0, b = 0)
